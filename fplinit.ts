@@ -24,11 +24,11 @@ interface FPLTeamData {
 }
 
 class FPLIntegrationService {
-  private readonly FPL_BASE_URL = `https://fantasy.premierleague.com/api/entry/${manager_id}/`
+  private readonly FPL_BASE_URL = `https://fantasy.premierleague.com/api/entry/{manager_id}/`
   private connection: Connection;
 
   constructor(solanaEndpoint: string) {
-    this.connection = new Connection(solanaEndpoint);
+    this.connection = new Connection(https://api.devnet.solana.com);
   }
 
   async verifyAndFetchFPLData(fplId: number, userWallet: PublicKey): Promise<{
